@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{ margin:0; padding:0; font-family: "Microsoft YaHei"; list-style-type: none;}
+body{ background:#f1f1f1;}
+input, select{ outline:none;}
+/*头部预留位置样式*/
+.top{ height:120px; line-height:120px; text-align:center; background:#fff;}
+
+/*快速申请*/
+.application{ width:1133px; height:603px; background:#fff; margin:45px auto 0; border:1px solid #dbdbdb; border-radius:5px; padding:62px 0 0 42px;}
+.application .banner{ width:563px; height:502px; background:url(../image/jkbanner.jpg) no-repeat; float:left;}
+.application .delCon{ float:left; margin-left:65px;}
+.application .delCon h1{ font-size:24px; color:#333333; font-weight:normal;}
+.iptBox{ margin-top:20px;}
+.iptBox span{ color:#666666; font-size:16px; margin-right:20px; display:inline-block;}
+.iptBox input{ width:340px; height:35px; border:1px solid #dbdbdb; border-radius:5px; padding-left:10px; font-size:14px; color:#333333;}
+.iptBox input:hover{ border-color:#295ab4;}
+.error{ margin-left:92px; font-size:14px; color:#ff6600; margin-top:8px; display:none;}
+.ageBox{ width:352px; height:37px; border:1px solid #dbdbdb; border-radius:5px; padding-left:6px; font-size:14px; -webkit-appearance: none; background:url(../image/down.png) no-repeat 318px center; cursor:pointer; color:#333333;}
+.ageBox:hover{ border-color:#295ab4;}
+.city{ height:37px;}
+.city span{ float:left; margin-top:7px;}
+.city .cityBox{ width:340px; height:35px; border:1px solid #dbdbdb; border-radius:5px; padding-left:10px; font-size:14px; color:#333333; float:left; margin-left:5px; background:url(../image/down.png) no-repeat 318px center; cursor:pointer;}
+.city .cityBox:hover{ border-color:#295ab4;}
+.city .cityBox dl dt{ line-height:35px;}
+.city .cityBox dl{ position:relative;}
+.city .cityBox dl dd{ width:333px; height:156px; position:absolute; left:-12px; top:38px; overflow:auto; border:1px solid #dbdbdb; background:#fff; display:none; padding-left:20px;}
+.city .cityBox dl dd a{ width:55px; height:26px; line-height:26px; display:inline-block; text-decoration:none; color:#666666; text-align:center;}
+.city .cityBox dl dd a:hover{ background:#e3f3fd;}
+.iptBox .message{ margin-left:-16px;}
+.iptBox .short{ width:258px;}
+.iptBox i{ font-size:12px; color:#295ab4; text-decoration:underline; font-style:normal; margin-left:5px; cursor:pointer;}
+.checkImg{ width:75px; height:35px; border:1px solid #dbdbdb; display:block; float:right; border-radius:5px; background:url(../image/check.png) no-repeat center center; cursor:pointer;}
+.applyBtn{ width:350px; height:45px; background:#ff6600; border:0; cursor:pointer; font-size:18px; color:#fff; margin-top:20px; margin-left:90px; border-radius:5px;}
+.line{ height:1px; border-bottom:1px solid #dbdbdb; margin-top:20px;}
+
+/*申请成功页面*/
+.successCon{ width:480px; margin:62px auto 0; text-align:center;}
+.successCon span{ color:#333333; font-size:30px; display:block; margin-left:20px; margin-top:5px;}
+.successCon p{ font-size:18px; color:#999999; margin-top:8px; margin-bottom:40px;}
+.successCon .app{ font-size:16px; color:#666666;}
+.successCon .app span{ font-size:16px; color:#ff6600; margin-left:0;}
+.line2{ height:1px; border-bottom:1px solid #dbdbdb; margin-top:95px;}
+
+/*登录框*/
+.loginBox{ width:410px; height:400px; background:#fff; margin:200px auto 0; position:relative;}
+.loginBox i{ width:26px; height:26px; background:url(../image/turn-off.png) no-repeat; position:absolute; right:-8px; top:-10px; cursor:pointer;}
+.loginBox h1{ height:40px; line-height:40px; background:#2f8ece; font-weight:normal; font-size:16px; color:#fff; padding-left:50px;}
+.loginipt{ width:270px; margin:54px auto 0;}
+.loginipt ul li{ width:220px; height:36px; line-height:36px; border:1px solid #ccc; position:relative; padding-left:48px;}
+.loginipt ul li span{ width:37px; height:36px; display:inline-block; background:#f4f4f4 url(../image/icon01.png) no-repeat center center; position:absolute; left:0; top:0;}
+.loginipt ul li strong{ width:220px; display:inline-block; font-weight:normal; color:#333333; font-size:14px;}
+.loginipt ul .password span{ background-image:url(../image/icon02.png);}
+.loginipt ul .password input{ width:220px; border:0;}
+.loginipt ul .password{ margin-top:22px;}
+.forget{ font-size:14px; color:#2f8ece; text-decoration:none; float:right; margin-top:20px;}
+.loginBtn{ width:270px; height:35px; background:#ff6600; border:0; border-radius:3px; color:#fff; font-size:14px; margin-top:15px; cursor:pointer;}

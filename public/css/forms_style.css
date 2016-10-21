@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*****银行账号字段******/
+.bankmember{position:relative; display:block; width:236px; z-index:1; height:34px;}
+.pr_bank{position:relative;}
+.bankmember .input_bank,.bankmember .user_name,.bankmember .user-umb,.bankmember .tel{width:100%; height:32px; line-height:32px; border: 1px solid #cdcdcd; font-family: Arial,Helvetica,sans-serif; margin-right: 10px; padding-left: 10px; position:absolute; left:0; top:0; z-index:2;}
+.bankmember span{width:100%; display:block; height:30px; line-height:30px; z-index:9999; color:#999; left:10px; top:2px; position:absolute;}
+.j_bank{display:none;color:#fff; font-weight:bold; font-size:20px; position:absolute;overflow: hidden; top:-34px; left:0;background:#7eb7de; border:solid 1px #7eb7de; font-family:Arial; height:32px; line-height:32px; width:100%; z-index:999; letter-spacing:2px; padding-left:10px;}
+.p_bk{position:relative;}
+.touzi01 .j_bank{width:98%;left:-1px}
+.yzm-fous{ display:inline-block; border:solid 1px #2980b9; color:#2980b9; border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -moz-border-radius:3px; line-height:30px; height:30px; padding:0 15px;}
+.yzm-blue{ display:inline-block; border:solid 1px #dfdfdf; color:#2980b9; border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -moz-border-radius:3px; line-height:30px; height:30px; padding:0 15px;}
+.yzm-time{ display:inline-block; background:#f6f6f6; border:solid 1px #dfdfdf; color:#999; border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px; -moz-border-radius:3px; line-height:30px; height:30px; padding:0 15px; margin-left:15px;}
+
+/*******报错提示信息**********/
+.prompt_2{display:inline-block; vertical-align:middle; line-height:15px;}
+.prompt_2 i{display:inline-block; width:15px; height:15px; line-height:15px; font-size:0; margin-right:5px; vertical-align:middle; background:url(img/icon.png) no-repeat;}
+.correct_2 i{background-position:-81px 0px;}
+.error_2 i{background-position:-81px -31px;}
+.remind_2 i{background-position:-81px -16px;}
+.error_2{color:#f00;}
+.remind_2{color:#666;}
+
+
+/**快钱充值渠道样式**/
+.errorthird{display:inline-block; color:#333; font-size:14px; display:none;}
+.errorthirdTip{display:inline-block;background: none repeat scroll 0 0 #fffeef; border: 1px solid #f6e4b2; line-height:30px; padding:0 10px; float:none; vertical-align:middle; display:none;}
+.errorthirdTip .lefts{margin-top:8px;}
+.errorthirdTip a{color:#2980b9; text-decoration:underline;}
+.errorTips{clear:both; padding-top:15px; display:none;}
+.errorTips a{color:#2980b9; text-decoration:underline; margin-left:5px;}
+
+/***易联弹框提示页面**/
+.page5 .fluid .Many-money{float:left; display:block; width:100%; line-height:24px; padding:5px 0 0 0; color:#999;}
+.page5 .fluid .Many-money em{font-family:Arial, Helvetica, sans-serif; color:#f60; margin:0 3px; font-weight:bold;}
+.page5 .fluid .yl_tips{float:left; display:block; width:100%; line-height:20px; padding:2px 0; color:#900;}
+.page5 .fluid .yl_tips a{color:#2980b9; margin-left: 5px;}
+.yl_tipsDiv,.yl_tipsDiv dl,.yl_overDiv,.yl_overDiv dl{width: 100%; float: left;}
+.yl_tipsDiv dt,.yl_overDiv dt{float: left; padding:0 0 10px 20px; width: 165px; text-align: right;}
+.yl_overDiv dt{padding-top: 30px;}
+.yl_tipsDiv dd,.yl_overDiv dd{float: right; width:590px;}
+.yl_tipsDiv dd p,.yl_overDiv dd p{background: #f4f9fd; padding: 10px 5px; color:#666; font-size: 14px; clear: both; float: left; width: 560px; margin: 8px 0;}
+.yl_tipsDiv dd p span{display: inline-block; background: url("../images/yl_pic02.png") left center no-repeat; width: 90px; height: 90px; vertical-align: middle; float: left; text-align: center; color:#2980b9; line-height: 90px; font-size: 16px; margin-left: 3px;}
+.yl_tipsDiv dd p label{float: right; width: 433px; border-left: solid 1px #eee; padding:0 5px 0 15px; margin-left:10px;}
+.yl_tipsDiv dd p label i{display: inline-block; width: 5px; height: 5px; vertical-align: middle; background: url("../images/yl_tipscril.png")left center no-repeat; margin-right: 4px;}
+.yl_tipsDiv dd p label em{color: #f60;}
+.yl_overDiv dd p span{display: inline-block; width: 30px; float: left; text-align: center; padding-top: 2px; padding-left: 20px;}
+.yl_overDiv dd .safe-tip-p{background: no-repeat; margin:0; padding:2px 5px;}
+.yl_overDiv dd p label{float: right; width: 490px; }
+.yl_overDiv dd p label strong{display:block;  font-size: 16px; color:#2980b9; padding-bottom: 10px;}
+.yl_overDiv dd p label strong b{font-weight: bold; font-size: 18px; font-family: "Arial", Gadget, sans-serif;}
+.yl_overDiv dd p label em{display: inline-block; padding-bottom: 5px;}
+.yl_overDiv dd .btn_con{padding-left:70px; clear: both; padding-top: 5px;}
+.yl_overDiv dd .btn_con p{background: no-repeat; margin:0; padding: 3px 5px;}

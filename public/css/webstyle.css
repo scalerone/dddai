@@ -1,0 +1,135 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;font-family: "Microsoft YaHei";vertical-align: baseline;list-style-type: none;background:transparent; font-weight:normal;}
+body{ background:#f1f1f1;}
+
+/*banner区域内容*/
+.banner{ height:350px; background:url(../image/banner.png) no-repeat center center; display:block;}
+.mycenter{ width:1180px; margin:0 auto; position:relative;}
+.fast_loan{ width:320px; height:320px; background:rgba(0,0,0,0.2); position:absolute; right:0; top:-335px; z-index:100;}
+.fast_loan .title{ height:45px; line-height:45px; background:rgba(0,0,0,0.3); font-size:18px; color:#fff; padding-left:30px;}
+.fast_loan .details{ padding:0 0 0 30px; font-size:16px; color:#fff;}
+.fast_loan .details p span{ color:#ff6600;}
+.fast_loan .details ul li{ width:258px; height:35px; line-height:35px; border-radius:3px; border:1px solid #e1e1e1; margin-top:14px; position:relative; background: #fff url(../image/down.png) no-repeat 235px center; cursor:pointer; font-size:14px; color:#666666;}
+.fast_loan .details ul li:hover{ background-image:url(../image/down2.png);}
+/*.fast_loan .details ul li .position{ width:14px; height:23px; background:url(../image/position.png) no-repeat; display:inline-block; position:absolute; left:10px; top:6px;}*/
+.fast_loan .details ul li strong{ color:#666666; font-size:16px; font-size:14px; display:block; padding-left:10px;}
+.fast_loan .details ul li strong:hover{ color:#0a49a6;}
+/*.fast_loan .details ul li .use{ width:20px; height:19px; background:url(../image/use.png) no-repeat; display:inline-block; position:absolute; left:8px; top:7px;}*/
+.fast_loan .details ul li input{ border:0; outline:none; width:222px; font-size:14px; color:#666666; padding-left:10px;}
+.fast_loan .details ul .phoneNum{ background-image:none;}
+.fast_loan .details ul .phoneNum:hover{ background-image:none;}
+/*.fast_loan .details ul li .phone{ width:15px; height:21px; background:url(../image/phone.png) no-repeat; display:inline-block; position:absolute;left:10px; top:7px;}*/
+.fast_loan .details .myBtn{ width:258px; height:40px; line-height:40px; text-align:center; text-decoration:none; padding:0; font-size:18px; color:#fff; border:0; background:#ff6600; border-radius:5px; margin-top:16px; display:block;}
+.hideCon{ position:absolute; left:-1px; top:37px; z-index:100; width:260px;  display:none;}
+.hideCon dd{ height:35px; background:#fff; border-bottom:1px solid #d1d1d1; color:#666666; font-size:14px; padding-left:10px;}
+.hideCon dd:hover{ color:#ff6600;}
+
+/* flexslider */
+.flexslider{ position:relative; height:350px; overflow:hidden;}
+.slides{ position:relative; z-index:1;}
+.slides li{ height:350px;}
+.slides li a{ display:inline-block; width:100%; height:350px;}
+.slides li .banner01{ background:url(../image/banner.jpg) 50% 0 no-repeat;}
+.slides li .banner02{ background:url(../image/banner2.jpg) 50% 0 no-repeat;}
+.flex-control-nav{ position:absolute; bottom:10px; z-index:2; width:100%; text-align:center;}
+.flex-control-nav li{ display:inline-block; width:12px; height:13px; margin:0 5px; *display:inline; zoom:1;}
+.flex-control-nav a{ display:inline-block; width:12px; height:13px; line-height:40px; overflow:hidden; background:url(../image/dot.png) right 0 no-repeat; cursor:pointer;}
+.flex-control-nav .flex-active{ background-position:0 0;}
+
+/*四大优势*/
+.center{ width:1180px; margin:0 auto;}
+.advantage{ margin-top:30px; overflow:hidden;}
+.advantage dl{ overflow:hidden; float:left; margin:0 36px;}
+.advantage dt,.advantage dd{ float:left;}
+.advantage dd{ color:#333333; margin-left:16px;}
+.advantage dd h2{ font-size:24px; margin-top:4px;}
+.advantage dd p{ font-size:14px; margin-top:8px;}
+.advantage dl .dt01{ width:67px; height:68px; background:url(../image/more.png) no-repeat;}
+.advantage dl .dt02{ width:67px; height:68px; background:url(../image/quick.png) no-repeat;}
+.advantage dl .dt03{ width:67px; height:68px; background:url(../image/good.png) no-repeat;}
+.advantage dl .dt04{ width:67px; height:68px; background:url(../image/save.png) no-repeat;}
+
+/*线上产品*/
+.products{ margin-top:45px; overflow:hidden;}
+.products h3{ font-size:20px; color:#333333; height:40px; border-bottom:1px solid #dad9d9; padding-left:10px;}
+.products h3 span{ font-size:14px; color:#999999; margin-left:20px;}
+.pro01{ float:left; margin-left:25px;}
+.pro02{ margin-left:50px;}
+.pro01 dl{/* overflow:hidden;*/}
+.pro01 dl dt,.products dl dd{ float:left;}
+.pro01 dl dt{ margin-top:23px;}
+.products dl dd{ width:300px; margin-left:12px; margin-top:20px; position:relative;}
+.products dl dd h4{ font-size:18px; color:#666666;}
+.products dl dd h4 strong{ font-size:24px; color:#333333; font-weight:normal; margin-left:15px;}
+.products dl dd p{ font-size:14px; color:#999999; margin-top:15px;}
+.products dl dd p strong{ color:#ff6600;}
+.products dl dd span{ font-size:14px; color:#333333; display:block; margin-top:15px;}
+.products dl dd .more{ border:1px solid #dad9d9; width:120px; height:38px; text-align:center; line-height:38px; border-radius:10px; font-size:16px; color:#295ab4; margin-top:15px; display:block; text-decoration:none; background:#fff;}
+.products dl dd a:hover{ color:#fff; background:#ff6600; border:0;}
+.pro01 dl dt{ width:225px; height:167px; background:url(../image/insurance.png) no-repeat;}
+.pro02 dl dt{ width:225px; height:167px; background:url(../image/house.png) no-repeat;}
+.hot{ width:38px; height:22px; background:url(../image/hot.png) no-repeat; position:absolute; right:-8px; top:5px; display:block;}
+.hot2{ right:39px;}
+
+/*线下产品*/
+.proList ul{ margin-top:30px; overflow:hidden;}
+.proList ul li{ width:230px; height:317px; border:1px solid #dad9d9; background:#fff; border-radius:5px; padding:25px; text-align:center; float:left; margin:0 17px 17px 0;}
+.proList ul li.nomr{ margin-right:0;}
+.proList ul li h5{ font-size:24px; color:#333333;}
+.proList ul li p{ font-size:14px; color:#999999; margin-top:15px; text-align:left;}
+.proList ul li strong{ margin-top:20px;}
+.proList ul li .clock{ margin-top:43px;}
+.proList ul li span{ text-align:center; display:block; font-size:16px; color:#666666; margin-top:10px;}
+.proList ul li a{ width:118px; height:38px; line-height:38px; text-align:center; text-decoration:none; border:1px solid #dad9d9; border-radius:10px; display:inline-block; font-size:16px; color:#295ab4; margin-top:15px;}
+.proList ul li a:hover{ color:#fff; background:#ff6600; border:0;}
+.proList ul .bigtitle strong{ margin-top:0;}
+.proList ul .bigtitle p{ margin-top:10px;}
+.proList ul .bigtitle span{ margin-top:4px;}
+.mortgage{ position:relative;}
+.mortgage label{ width:42px; height:37px; line-height:37px; background:#ff6600; display:block; color:#fff; font-size:12px; position:absolute; right:0px; top:19px;}
+.proList ul li strong{ display:inline-block; width:140px; height:123px;}
+.proList ul .li01 strong{ background:url(../image/img01.png) no-repeat;}
+.proList ul .li02 strong{ background:url(../image/img02.png) no-repeat;}
+.proList ul .li03 strong{ width:160px; background:url(../image/img03.png) no-repeat;}
+.proList ul .li04 strong{ width:150px;  background:url(../image/img04.png) no-repeat;}
+.proList ul .li05 strong{ background:url(../image/img05.png) no-repeat;}
+.proList ul .li06 strong{ background:url(../image/img06.png) no-repeat;}
+.proList ul .li07 strong{ background:url(../image/img07.png) no-repeat;}
+.proList ul .li08 strong{ background:url(../image/img08.png) no-repeat;}
+.proList ul .li09 strong{ background:url(../image/img09.png) no-repeat;}
+.proList ul .li10 strong{ background:url(../image/img10.png) no-repeat;}
+.proList ul .student strong{ margin-top:1px;}
+.mortgage .phoneLoan{ background:#295ab4; line-height:15px; padding-top:4px; height:34px;}
+
+/*借款流程*/
+.loanprocess h3{ font-size:20px; color:#333333; height:40px; border-bottom:1px solid #dad9d9; padding-left:10px;}
+.loanprocess{ margin-top:17px;}
+.loanprocess div{ overflow:hidden; padding-top:25px;}
+.loanprocess div dl{ float:left; text-align:center; margin-left:110px; position:relative;}
+.loanprocess div dl .line01{ width:140px; height:2px; background:url(../image/line.png) no-repeat; position:absolute; right:-145px; top:30px;}
+.loanprocess div dl .line02{ width:140px; height:2px; background:url(../image/line.png) no-repeat; position:absolute; right:-130px; top:30px;}
+.loanprocess div dl .line03{ width:140px; height:2px; background:url(../image/line.png) no-repeat; position:absolute; right:-130px; top:30px;}
+.loanprocess div .dl02{ margin-left:145px;}
+.loanprocess div .dl03{ margin-left:120px;}
+.loanprocess div .dl04{ margin-left:110px;}
+.loanprocess div dl dd{ margin-top:15px; font-size:18px; color:#333333;}
+.loanprocess p{ height:26px; line-height:26px; background:url(../image/info.png) no-repeat left center; margin:24px 0 0 110px; padding-left:35px; font-size:14px; color:#999999;}
+.loanprocess div dl dt{ display:inline-block;}
+.loanprocess div .dl01 dt{ width:52px; height:59px; background:url(../image/pimg01.png) no-repeat;}
+.loanprocess div .dl02 dt{ width:72px; height:60px; background:url(../image/pimg02.png) no-repeat;}
+.loanprocess div .dl03 dt{ width:83px; height:61px; background:url(../image/pimg03.png) no-repeat;}
+.loanprocess div .dl04 dt{ width:61px; height:61px; background:url(../image/pimg04.png) no-repeat;}
+
+/*常见问题*/
+.question{ height:540px; background:#ededed; margin-top:40px;}
+.questionCon{ width:1180px; margin:0 auto; padding-top:20px;}
+.questionCon ul{ margin-left:110px;}
+.questionCon ul li{ margin-top:40px;}
+.questionCon ul li h6{ height:30px; line-height:30px; font-size:18px; color:#333333; padding-left:48px;}
+.questionCon ul li span{ font-size:16px; color:#666666; margin:10px 0 0 48px; display:block;}
+.questionCon ul li .question01{ background:url(../image/qimg01.png) no-repeat left center;}
+.questionCon ul li .question02{ background:url(../image/qimg02.png) no-repeat left center;}
+.questionCon ul li .question03{ background:url(../image/qimg03.png) no-repeat left center;}
+.questionCon ul li .question04{ background:url(../image/qimg04.png) no-repeat left center;}
+
