@@ -4,8 +4,8 @@
 <title>注册点点贷会员领10000元体验金+100元红包 - 点点贷 </title>
 <meta content="注册,点点贷,红包,体验金,体验宝,点点贷理财,返现 " name="keywords">
 <meta content="注册点点贷会员即领10000元体验金+100元红包，投资体验宝，立享3天8.8%年化收益，注册7天内，完成首次投资送等额体验金，投资任意产品（除体验宝），立享超高返现，返现高至10000元。" name="description">
-<link type="text/css" rel="stylesheet" href="css/common.css">
-<link type="text/css" rel="stylesheet" href="css/reg.css">
+<link type="text/css" rel="stylesheet" href="/css/common.css">
+<link type="text/css" rel="stylesheet" href="/css/reg.css">
 
 </head>
 
