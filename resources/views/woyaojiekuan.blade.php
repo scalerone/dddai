@@ -218,6 +218,7 @@ style.firebugResetStyles {
 
 
 <form id="applyForm" name="applyForm" action="" method="POST">
+{!! csrf_field() !!}
  <div class="application">
         <figure class="banner"></figure>
         <div class="delCon">

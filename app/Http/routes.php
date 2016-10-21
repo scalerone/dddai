@@ -15,10 +15,15 @@
 //     return view('welcome');
 // });
 
-//测试用
+//测试用 - 测试能否跑通
 Route::get('test/index',function()
 {
     return view('index');
+});
+
+//测试用 - 检测是否登录
+Route::get('/auth/test',function(){
+    return Auth::check() ? 'ok':'login is required';
 });
 
 
@@ -43,3 +48,13 @@ Route::post('auth/login','Auth\AuthController@postLogin');
 
 // 用户退出
 Route::get('auth/logout','Auth\AuthController@getLogout');
+
+
+
+
+/* 借款 */
+//借款
+Route::get('jie','ProjectController@getJie');
+Route::post('jie','ProjectController@postJie');
+
+
