@@ -43,5 +43,3 @@ Route::post('auth/login','Auth\AuthController@postLogin');
 
 // 用户退出
 Route::get('auth/logout','Auth\AuthController@getLogout');
-
-
