@@ -90,7 +90,7 @@
                     	<!--1-->
                         <div class="clearfix nr form" style="display: block;">
                         <form id="loginForm" method="post" class="nwd-formUi" action="{{url('auth/login')}}">
-                            {!! csrf_filed() !!}
+                            {!! csrf_field() !!}
            	  				<input type="hidden" id="codeType" value="0" name="codeType">
            	  				<input type="hidden" value="geetest" name="geetestCode">
                         	<table width="280" cellspacing="0" cellpadding="0" border="0" align="center" class="mt_10">

@@ -32,7 +32,7 @@
 						<h2>注册送10000元体验金+100元红包</h2>
 					</div>
 					<form action="{{url('auth/register')}}" method="post">
-					{!! csrf_filed() !!}
+					{!! csrf_field() !!}
                     <div class="content_box pb_20">
 						<label class="input_text yzm3">
 							<input type="text" class="inp_bor inpIco3" placeholder="手机号" id="u" name="mobile">
