@@ -104,7 +104,7 @@
                               <tr>
                                 <td class="pad">
                                     <label class="touzi01 long">
-                                        <input type="text" class="input_1 pos_u gray_border" placeholder="用户名" id="username" name="name">
+                                        <input type="text" class="input_1 pos_u gray_border" placeholder="邮箱" id="username" name="email">
                                     </label>
                                 </td>
                             </tr>
@@ -118,7 +118,7 @@
                             <tr>
                                 <td>
                                   <div class="user clearfix fs_14 fc_3">
-                                    <p class="fl"><input type="checkbox" class="mr_5" id="rem" checked="checked"><label class="fc_9" for="rem">记住用户名</label></p>
+                                    <p class="fl"><input type="checkbox" class="mr_5" id="rem" checked="checked"><label class="fc_9" for="rem">记住密码</label></p>
                                     <a style="padding-right:10px;" class="fr fc_blue" href="#">忘记密码？</a>
                                   </div>
                                 </td>
