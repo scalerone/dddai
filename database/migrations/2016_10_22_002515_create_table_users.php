@@ -16,6 +16,7 @@ class CreateTableUsers extends Migration
             $table->increments('uid');
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('mobile',11)->unique();
             $table->string('password',60);
             $table->rememberToken();
             $table->integer('regtime');
