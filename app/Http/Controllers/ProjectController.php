@@ -22,7 +22,7 @@ class ProjectController extends Controller
     public function postJie(Request $req){
         //检查该用户是否有之前的借款尚未归还
         $loan = Project::where('uid','=',Auth::user()->uid)->where('status','<>',3)->count();
-        
+
         if($loan > 0){
             return 'this user has another loan';
         }
@@ -48,5 +48,13 @@ class ProjectController extends Controller
         $att->save();
 
         echo 'ok';
+    }
+
+
+
+    //项目投标展示
+    public function getPro($pid){
+        $project = Project::where(['pid'=>$pid, 'status'=>1])->first();
+        return view('lijitouzi',['project'=>$project]);
     }
 }

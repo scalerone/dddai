@@ -22,7 +22,7 @@
 
 <!--时间  e-->
  
-<!---静态化 - 头部内容---->
+<!-- 静态化 - 头部内容 -->
 
 
 <link href="/css/forms_style.css" rel="stylesheet" type="text/css">
@@ -125,21 +125,21 @@
 	                    	<li class="fl td1">
 	                        	<h4 class="fc_9 pl_20">产品名称</h4>
 	                            <p class="pl_20 fs_18 fc_6">
-	                            <a href="#" title="房屋抵押借款">
-	                            房***款
+	                            <a href="#">
+	                            {{$project->title}}
 	                            </a>
 	                             </p>
 	                        </li>
 	                        <li class="fl td2">
 	                        	<h4 class="fc_9">借款年利率</h4>
 	                            <p class="airal fs_24 fc_orange">
-	                            8%
+	                            {{$project->rate}}%
 	                            </p>
 	                        </li>
 	                        <li class="fl td3">
 	                        	<h4 class="fc_9 pl_15">还款期限</h4>
 	                            <p class="fs_18 pl_15">
-	                            6个月
+	                            {{$project->hrange}}个月
 	                            </p>
 	                        </li>
 	                        <li class="fl td4">
@@ -147,9 +147,9 @@
 	                            <p>按月付息 到期还本</p>
 	                        </li>
 	                        <li class="fl td5">
-	                        	<h4 class="fc_9">投资金额(元)</h4>
+	                        	<h4 class="fc_9">可投资金额(元)</h4>
 	                            <p><span class="airal fs_24 fc_orange">
-	                                   50.00
+	                                   {{($project->money - $project->receive) / 1000}}
 	                            </span>元</p>
 	                        </li>
 	                        
@@ -160,6 +160,7 @@
                 <div class="fr r" style="width:310px;">
                 	<div class="td_all2">
                     	<form action="" method="post">
+                        {!!csrf_field()!!}
                         <table width="100%" class="fc_6">
                         	<tbody>
                             <tr>
