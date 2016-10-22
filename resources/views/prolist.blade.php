@@ -164,7 +164,7 @@
                                    <td class="f">{{$v->pid}}</td>
                                    <td>{{date('Y/m/d H:i',$v->pubtime)}}</td> 
                                    <td class="tr"><span>{{$v->name}}</span></td> 
-                                   <td class="tr">{{$v->money}}</td> 
+                                   <td class="tr">{{$v->money/1000}}</td> 
                                    <td class="tr">{{$v->mobile}}</td>
                                    <td class="">
                                        @if($v->status == 0)

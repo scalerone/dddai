@@ -33,4 +33,39 @@ class CheckController extends Controller
         return view('shenhe',['project'=>$project,'att'=>$att]);
     }
 
+    //提交审核结果
+    public function postCheck(Request $req){
+        //从隐藏域中获取pid
+        $pid = $req->pid;
+        $att = Att::where('pid',$pid)->first();
+        $project = Project::find($pid);
+        
+        //判断该项目是否存在
+        if(empty($project)){
+            return redirect('/prolist');
+        }
+
+        //如果项目存在,则将获取的数据写入数据库
+        $project->title = $req->title;
+        $att->title = $req->title;
+        $att->realname = $req->realname;
+        $att->gender = $req->gender;
+        $att->marry = $req->marry;
+        $att->salary = $req->salary;
+        $att->jobcity = $req->jobcity;
+        $project->hrange = $req->hrange;
+        $project->rate = $req->rate;
+        $att->udesc = $req->udesc;
+        $project->status = $req->status;
+
+        //判断是否写入成功
+        if($project->save() && $att->save()){
+            return redirect('/prolist');
+        } else{
+            // return ['status'=>0; 'msg'=>'database insert failed'];
+            return 'database insert failed';
+        }
+
+    }
+
 }

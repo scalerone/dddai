@@ -32,9 +32,6 @@ class ProjectController extends Controller
         $project->mobile = $req->mobile;
         $project->pubtime = time();
         $project->save();
-        //上边new完之后,对象对应的就是表,称为表对象,此时对象为空
-        //下面又给表对象中添加数据,执行save()
-        //此时的$project对象, 对应的就是刚刚执行插入的那一行数据; 因此后面就可以根据它取出pid
 
         $att->uid = $user->uid;
         $att->pid = $project->pid;

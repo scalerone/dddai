@@ -227,13 +227,7 @@ style.firebugResetStyles {
 
             <div class="iptBox">
                 <span>真实年龄</span>
-                <select class="ageBox" id="age" name="age">
-                    <option selected="selected" value="0">请选择年龄段</option>
-                    <option value="15">23岁以下</option>
-                    <option value="40">23岁-55岁</option>
-                    <option value="80">55岁以上</option>
-                </select>
-                <p id="ageError" class="error">请选择年龄段</p>
+                <input id="age" name="age" placeholder="请输入真实年龄" maxlength="3" type="text">
             </div>
 
             <div class="iptBox">

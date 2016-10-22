@@ -128,11 +128,15 @@
                                 <tbody>
                                     <tr>
                                         <td>项目名称:</td>
-                                        <td><input type="text" name="title" value="{{$project->name}}"></td>
+                                        <td><input type="text" name="title" value=""></td>
                                     </tr>
                                     <tr>
                                         <td>真实姓名:</td>
-                                        <td><input type="text" name="title"></td>
+                                        <td><input type="text" name="realname"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>真实年龄:</td>
+                                        <td><input type="text" name="realname" placeholder="该用户声称是{{$att->age}}岁"></td>
                                     </tr>
                                     <tr>
                                         <td>性别:</td>
@@ -161,7 +165,7 @@
                                     </tr>
                                     <tr>
                                         <td>借款金额:</td>
-                                        <td><input type="text" name="money" value="{{$project->money/1000}}"></td>
+                                        <td>{{$project->money/1000}}元</td>
                                     </tr>
                                     <tr>
                                         <td>月收入:</td>
@@ -175,13 +179,13 @@
                                         <td>借款期限:</td>
                                         <td>
                                             <select name="hrange">
-                                            <option value="3">3个月</option>
-                                            <option value="6">6个月</option>
-                                            <option value="9">9个月</option>
-                                            <option value="12">12个月</option>
-                                            <option value="18">18个月</option>
-                                            <option value="24">24个月</option>
-                                            <option value="36" selected>36个月</option>
+                                                <option value="3">3个月</option>
+                                                <option value="6">6个月</option>
+                                                <option value="9">9个月</option>
+                                                <option value="12">12个月</option>
+                                                <option value="18">18个月</option>
+                                                <option value="24">24个月</option>
+                                                <option value="36" selected>36个月</option>
                                             </select>
                                         </td>
                                     </tr>

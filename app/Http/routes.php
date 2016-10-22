@@ -67,3 +67,6 @@ Route::get('prolist','CheckController@getProlist');
 //审核项目
 Route::get('check/{pid}','CheckController@getCheck');
 
+//提交审核结果
+Route::post('check/{pid}','CheckController@postCheck');
+
