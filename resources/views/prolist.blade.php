@@ -159,19 +159,32 @@
                                    <th class="">状态</th>
                                    <th class="l">操作</th>
                                 </tr>
-                            
+                                @forelse($data as $v)
                                 <tr>
-                                   <td class="f">7</td>
-                                   <td>0</td> 
-                                   <td class="tr"><span>test2</span></td> 
-                                   <td class="tr">3000</td> 
-                                   <td class="tr">13426060134</td>
-                                   <td class="">待审核</td>
+                                   <td class="f">{{$v->pid}}</td>
+                                   <td>{{date('Y/m/d H:i',$v->pubtime)}}</td> 
+                                   <td class="tr"><span>{{$v->name}}</span></td> 
+                                   <td class="tr">{{$v->money}}</td> 
+                                   <td class="tr">{{$v->mobile}}</td>
+                                   <td class="">
+                                       @if($v->status == 0)
+                                       待审核
+                                       @elseif ($v->status == 1)
+                                       招标中
+                                       @elseif ($v->status == 2)
+                                       还款中
+                                       @elseif ($v->status == 3)
+                                       已结束
+                                       @endif
+                                   </td>
                                    <td class="l"><a href="#">审核</a></td>
                                 </tr>
+                                @empty
+                                <div class="wujilu" id="errorMsg">暂无记录</div>
+                                @endforelse
                                 </tbody>
                              </table>
-                            <div class="wujilu" id="errorMsg">暂无记录</div>
+                            
                             <!--table end-->
                             <div class="t_foot">
                                 

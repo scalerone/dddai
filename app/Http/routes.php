@@ -58,3 +58,12 @@ Route::get('jie','ProjectController@getJie');
 Route::post('jie','ProjectController@postJie');
 
 
+
+
+/* 项目审核 */
+//项目列表
+Route::get('prolist','CheckController@getProlist');
+
+//审核项目
+Route::get('check/{pid}','CheckController@getCheck');
+
