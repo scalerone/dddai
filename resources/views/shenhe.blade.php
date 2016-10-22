@@ -122,11 +122,13 @@
                         <div class="clearfix nr">
                             <!--table-->
                             <form action="" method="post">
+                            {!!csrf_field()!!}
+                            <input type="hidden" name="pid" value="{{$project->pid}}">
                             <table class="table" >
                                 <tbody>
                                     <tr>
                                         <td>项目名称:</td>
-                                        <td><input type="text" name="title"></td>
+                                        <td><input type="text" name="title" value="{{$project->name}}"></td>
                                     </tr>
                                     <tr>
                                         <td>真实姓名:</td>
@@ -135,24 +137,31 @@
                                     <tr>
                                         <td>性别:</td>
                                         <td>
+                                            @if ($att->gender == '男')
                                             <select name="gender">
-                                            <option value="1">男</option>
-                                            <option value="0">女</option>
+                                                <option value="1" selected>男</option>
+                                                <option value="0">女</option>
                                             </select>
+                                            @else
+                                            <select name="gender">
+                                                <option value="1">男</option>
+                                                <option value="0" selected>女</option>
+                                            </select>
+                                            @endif
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>婚否:</td>
                                         <td>
                                             <select name="marry">
-                                            <option value="1">已婚</option>
-                                            <option value="0">未婚</option>
+                                                <option value="1">已婚</option>
+                                                <option value="0" selected>未婚</option>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>借款金额:</td>
-                                        <td><input type="text" name="money" value=""></td>
+                                        <td><input type="text" name="money" value="{{$project->money/1000}}"></td>
                                     </tr>
                                     <tr>
                                         <td>月收入:</td>
@@ -172,7 +181,7 @@
                                             <option value="12">12个月</option>
                                             <option value="18">18个月</option>
                                             <option value="24">24个月</option>
-                                            <option value="36">36个月</option>
+                                            <option value="36" selected>36个月</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -184,7 +193,7 @@
                                             <option value="8">8%</option>
                                             <option value="10">10%</option>
                                             <option value="12">12%</option>
-                                            <option value="15">15%</option>
+                                            <option value="15" selected>15%</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -198,8 +207,8 @@
                                         <td>审核结果:</td>
                                         <td>
                                             <select name="status">
-                                            <option value="1">通过</option>
-                                            <option value="-1">拒绝</option>
+                                                <option value="1">通过</option>
+                                                <option value="-1" selected>拒绝</option>
                                             </select>
                                         </td>
                                     </tr>
