@@ -135,25 +135,27 @@
                 <!--l e-->
                 <!--r s-->
                 <div class="fl pro_con">
+
+                    @foreach($project as $v)
                     <!--1 s-->
                     <div class="pro_bor">
                         <ul class="clearfix pro_list_box">
                             <li class="w1">
                                 <p class="fc_9 mb_5">预期年化 </p>
-                                <p class="fc_orange airal"><em class="fs_28">13.2</em>
+                                <p class="fc_orange airal"><em class="fs_28">{{$v->rate}}</em>
                                     <em class="fs_18">%</em>                       
                                 </p>
                             </li>
                             <li class="w2">
                                 <p class="fc_9 mb_5">期限</p>
-                                <p class="fc_6"><em class="fs_18">32</em>个月</p>
+                                <p class="fc_6"><em class="fs_18">{{$v->hrange}}</em>个月</p>
                             </li>
                             <li class="w3">
                                 <p class="fc_9 mb_5">投资金额 </p>
-                                <p class="fc_6 airal fs_18">464.95</p>
+                                <p class="fc_6 airal fs_18">{{$v->receive/1000}}</p>
                             </li>
                             <li class="w4">
-                                <span class="b_jingdu b_jd86">86.03%</span>
+                                <span class="b_jingdu b_jd86">{{sprintf('%.2f',$v->receive / $v->money * 100)}}%</span>
                             </li>
                             <li class="w5">
                                     <a class="btn btnSize_1 btn_orange" href="javascript:;">立即投标</a>
@@ -161,58 +163,8 @@
                         </ul>
                     </div>
                     <!--1 e -->
-                    <!--1 s-->
-                    <div class="pro_bor">
-                        <ul class="clearfix pro_list_box">
-                            <li class="w1">
-                                <p class="fc_9 mb_5">预期年化 </p>
-                                <p class="fc_orange airal"><em class="fs_28">13.2</em>
-                                    <em class="fs_18">%</em>                       
-                                </p>
-                            </li>
-                            <li class="w2">
-                                <p class="fc_9 mb_5">期限</p>
-                                <p class="fc_6"><em class="fs_18">32</em>个月</p>
-                            </li>
-                            <li class="w3">
-                                <p class="fc_9 mb_5">投资金额 </p>
-                                <p class="fc_6 airal fs_18">1,856.28</p>
-                            </li>
-                            <li class="w4">
-                                <span class="b_jingdu b_jd81">80.81%</span>
-                            </li>
-                            <li class="w5">
-                                    <a class="btn btnSize_1 btn_orange" href="javascript:;">立即投标</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--1 e -->
-                    <!--1 s-->
-                    <div class="pro_bor">
-                        <ul class="clearfix pro_list_box">
-                            <li class="w1">
-                                <p class="fc_9 mb_5">预期年化 </p>
-                                <p class="fc_orange airal"><em class="fs_28">13.2</em>
-                                    <em class="fs_18">%</em>                       
-                                </p>
-                            </li>
-                            <li class="w2">
-                                <p class="fc_9 mb_5">期限</p>
-                                <p class="fc_6"><em class="fs_18">20</em>个月</p>
-                            </li>
-                            <li class="w3">
-                                <p class="fc_9 mb_5">投资金额 </p>
-                                <p class="fc_6 airal fs_18">934.87</p>
-                            </li>
-                            <li class="w4">
-                                <span class="b_jingdu b_jd53">53.48%</span>
-                            </li>
-                            <li class="w5">
-                                    <a class="btn btnSize_1 btn_orange" href="javascript:;">立即投标</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!--1 e -->
+                    @endforeach
+       
                     <!--1 e -->
                     <!--1 e -->
                 </div>

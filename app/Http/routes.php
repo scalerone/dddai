@@ -70,3 +70,8 @@ Route::get('check/{pid}','CheckController@getCheck');
 //提交审核结果
 Route::post('check/{pid}','CheckController@postCheck');
 
+
+
+/* 投资 */
+//首页展示
+

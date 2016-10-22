@@ -45,6 +45,12 @@ class CheckController extends Controller
             return redirect('/prolist');
         }
 
+        //在提交申请时已经检查, 这里再次检查, 检查该用户是否有之前的借款尚未归还
+        $loan = Project::where('pid','=',$pid)->where('status','<>',3)->count();
+        if($loan > 0){
+            return 'this user has another loan';
+        }
+
         //如果项目存在,则将获取的数据写入数据库
         $project->title = $req->title;
         $att->title = $req->title;

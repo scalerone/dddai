@@ -20,6 +20,13 @@ class ProjectController extends Controller
 
     //提交借款
     public function postJie(Request $req){
+        //检查该用户是否有之前的借款尚未归还
+        $loan = Project::where('uid','=',Auth::user()->uid)->where('status','<>',3)->count();
+        
+        if($loan > 0){
+            return 'this user has another loan';
+        }
+
         //实例化Project和Att
         $project = new Project();
         $att = new Att();
@@ -36,7 +43,8 @@ class ProjectController extends Controller
         $att->uid = $user->uid;
         $att->pid = $project->pid;
         $att->age = $req->age;
-        $att->pid = $project->pid; //此时可以用$project取到该表对象的任何字段值
+        $att->pid = $project->pid;
+
         $att->save();
 
         echo 'ok';
