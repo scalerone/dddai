@@ -75,3 +75,7 @@ Route::post('check/{pid}','CheckController@postCheck');
 /* 投资 */
 //投标页展示
 Route::get('pro/{pid}',"ProjectController@getPro");
+
+//提交投资申请
+Route::post('touzi/{pid}',"ProjectController@postTouzi");
+

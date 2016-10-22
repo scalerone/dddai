@@ -159,13 +159,13 @@
                 <!--r s-->
                 <div class="fr r" style="width:310px;">
                 	<div class="td_all2">
-                    	<form action="" method="post">
+                    	<form action="{{url('touzi',[$project->pid])}}" method="post">
                         {!!csrf_field()!!}
                         <table width="100%" class="fc_6">
                         	<tbody>
                             <tr>
                             	<th class="fs_16 fc_9" style="text-align:left;">投资金额：</th>
-                                <td style="padding-right:0;width:220px;"><input style="width:140px;" class="fc_orange airal fs_18">元</td>
+                                <td style="padding-right:0;width:220px;"><input style="width:140px;" class="fc_orange airal fs_18" name="money">元</td>
                             </tr>                          
                         </tbody>
                         </table>
