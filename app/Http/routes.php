@@ -79,3 +79,11 @@ Route::get('pro/{pid}',"ProjectController@getPro");
 //提交投资申请
 Route::post('touzi/{pid}',"ProjectController@postTouzi");
 
+
+
+/* 支付和催款 */
+//用来后台形成每日支付列表
+Route::get('payrun','GrowController@getPayrun');
+
+//借款者账单展示
+Route::get('myzd','ProjectController@myzd');

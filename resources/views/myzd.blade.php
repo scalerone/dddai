@@ -136,78 +136,27 @@
                                    <th class="f">还款状态</th> 
                                    <th class="f">操作</th> 
                                 </tr>
-                                                            <tr>
-                                   <td class="f">55</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">197.08</td>
-                                   <td class="f">2016-06-10</td>
 
-                                  
-                                                                               <td class="f">未还款</td>
-                                   <td class="f"><a>还款</a></td>
-                                                                          
+                                @forelse($hks as $v)
+                                <tr>
+                                   <td class="f">{{$v->pid}}</td>
+                                   <td class="f">{{$v->title}}</td>
+                                   <td class="f">{{$v->amount}}</td>
+                                   <td class="f">{{$v->paydate}}</td>
+                                   @if($v->status == 0)
+                                   <td class="f">未还款</td>
+                                   @elseif($v->status == 1)
+                                   <td class="f"><a>已还款</a></td>
+                                   @endif                              
                                 </tr>
-                                                            <tr>
-                                   <td class="f">56</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">197.08</td>
-                                   <td class="f">2016-07-10</td>
-
-                                  
-                                                                               <td class="f">未还款</td>
-                                   <td class="f"><a>还款</a></td>
-                                                                          
+                                @empty
+                                <tr>
+                                    <td colspan="6"> 
+                                    <div class="wujilu" id="errorMsg">暂无记录</div>
+                                    </td>
                                 </tr>
-                                                            <tr>
-                                   <td class="f">57</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">197.08</td>
-                                   <td class="f">2016-08-10</td>
-
-                                  
-                                                                               <td class="f">未还款</td>
-                                   <td class="f"><a>还款</a></td>
-                                                                          
-                                </tr>
-                                                            <tr>
-                                   <td class="f">58</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">197.08</td>
-                                   <td class="f">2016-09-10</td>
-
-                                  
-                                                                               <td class="f">未还款</td>
-                                   <td class="f"><a>还款</a></td>
-                                                                          
-                                </tr>
-                                                            <tr>
-                                   <td class="f">59</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">197.08</td>
-                                   <td class="f">2016-10-10</td>
-
-                                  
-                                                                               <td class="f">未还款</td>
-                                   <td class="f"><a>还款</a></td>
-                                                                          
-                                </tr>
-                                                            <tr>
-                                   <td class="f">60</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">197.08</td>
-                                   <td class="f">2016-11-10</td>
-
-                                  
-                                                                               <td class="f">未还款</td>
-                                   <td class="f"><a>还款</a></td>
-                                                                          
-                                </tr>
-                            <tr>
-                                <td colspan="6"> 
-                                <div class="wujilu" id="errorMsg">暂无记录</div>
-                                </td>
-                            </tr>
-                                                            </tbody>
+                                @endforelse
+                             </tbody>
                              </table>
                             <!--table end-->
                             <div class="t_foot">
