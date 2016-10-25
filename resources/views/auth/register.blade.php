@@ -3,7 +3,7 @@
 <meta charset="utf-8">
 <title>注册点点贷会员领10000元体验金+100元红包 - 点点贷 </title>
 <meta content="注册,点点贷,红包,体验金,体验宝,点点贷理财,返现 " name="keywords">
-<meta content="注册点点贷会员即领10000元体验金+100元红包，投资体验宝，立享3天8.8%年化收益，注册7天内，完成首次投资送等额体验金，投资任意产品（除体验宝），立享超高返现，返现高至10000元。" name="description">
+<meta content="注册点点贷
 <link type="text/css" rel="stylesheet" href="/css/common.css">
 <link type="text/css" rel="stylesheet" href="/css/reg.css">
 
@@ -44,10 +44,10 @@
 							<input type="text" class="inp_bor inpIco3" placeholder="Email" id="email" name="email">
 						</label>
                         <label class="input_text yzm3">
-							<input type="text" class="inp_bor inpIco3" placeholder="密码" id="pwd" name="password">
+							<input type="password" class="inp_bor inpIco3" placeholder="密码" id="pwd" name="password">
 						</label>
                         <label class="input_text yzm3">
-							<input type="text" class="inp_bor inpIco3" placeholder="确认密码" id="repwd" name="password_confirmation">
+							<input type="password" class="inp_bor inpIco3" placeholder="确认密码" id="repwd" name="password_confirmation">
 						</label>
 						<!--div class="input_prompt"> <span class="fs_14 fc_6" id="mobileMsg" style="display: block;"><i class="ico ico_s14 ico3"></i>手机号码不能为空</span>
                         </div-->

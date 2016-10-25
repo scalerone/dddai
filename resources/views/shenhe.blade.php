@@ -169,7 +169,7 @@
                                     </tr>
                                     <tr>
                                         <td>月收入:</td>
-                                        <td><input type="text" name="salary" value="">K</td>
+                                        <td><input type="text" name="salary" value="">元</td>
                                     </tr>
                                     <tr>
                                         <td>工作城市:</td>

@@ -23,6 +23,9 @@ class AuthController extends Controller
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
+
+    protected $redirectPath = '/';  #登录成功后跳转的路径
+
     /**
      * Create a new authentication controller instance.
      *

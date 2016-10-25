@@ -177,7 +177,7 @@
                                        已结束
                                        @endif
                                    </td>
-                                   <td class="l"><a href="#">审核</a></td>
+                                   <td class="l"><a href="{{url('check',[$v->pid])}}">审核</a></td>
                                 </tr>
                                 @empty
                                 <div class="wujilu" id="errorMsg">暂无记录</div>

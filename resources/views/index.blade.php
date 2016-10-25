@@ -158,7 +158,7 @@
                                 <span class="b_jingdu b_jd86">{{sprintf('%.2f',$v->receive / $v->money * 100)}}%</span>
                             </li>
                             <li class="w5">
-                                    <a class="btn btnSize_1 btn_orange" href="javascript:;">立即投标</a>
+                                    <a class="btn btnSize_1 btn_orange" href="{{url('pro',[$v->pid])}}">立即投标</a>
                             </li>
                         </ul>
                     </div>

@@ -22,7 +22,7 @@ Route::get('test/index',function()
 });
 
 //测试用 - 检测是否登录
-Route::get('/auth/test',function(){
+Route::get('/test',function(){
     return Auth::check() ? Auth::user()->uid:'login is required';
 });
 

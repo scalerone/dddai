@@ -46,7 +46,7 @@ class CheckController extends Controller
         }
 
         //在提交申请时已经检查, 这里再次检查, 检查该用户是否有之前的借款尚未归还
-        $loan = Project::where('pid','=',$pid)->where('status','<>',3)->count();
+        $loan = Project::where('pid','=',$pid)->where('status','<>',3)->where('status','<>',0)->count();
         if($loan > 0){
             return 'this user has another loan';
         }
