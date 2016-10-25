@@ -129,36 +129,31 @@
                             <!--table-->
                             <table class="table">
                                 <tbody>
+
                                 <tr>
                                    <th class="f">ID</th>
                                    <th class="f">项目名称</th> 
                                    <th class="f">收益金额</th> 
                                    <th class="f">收益时间</th> 
                                 </tr>
-                                                                <tr>
-                                   <td class="f">1</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">0.29</td>
-                                   <td class="f">2016-05-10</td>
+
+                                @forelse($grows as $v)
+                                <tr>
+                                   <td class="f">{{$v->pid}}</td>
+                                   <td class="f">{{$v->title}}</td>
+                                   <td class="f">{{$v->amount / 1000}}</td>
+                                   <td class="f">{{$v->paytime}}</td>
                                 </tr>
-                                                                <tr>
-                                   <td class="f">3</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">0.29</td>
-                                   <td class="f">2016-05-10</td>
+
+                                @empty
+                                <tr>
+                                    <td colspan="4"> 
+                                    <div class="wujilu" id="errorMsg">暂无记录</div>
+                                    </td>
                                 </tr>
-                                                                <tr>
-                                   <td class="f">5</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">0.29</td>
-                                   <td class="f">2016-05-10</td>
-                                </tr>
-                            <tr>
-                                <td colspan="4"> 
-                                <div class="wujilu" id="errorMsg">暂无记录</div>
-                                </td>
-                            </tr>
-                                                                </tbody>
+                                @endforelse
+                             
+                             </tbody>
                              </table>
                             <!--table end-->
                             <div class="t_foot">

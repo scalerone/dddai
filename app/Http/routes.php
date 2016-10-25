@@ -38,7 +38,11 @@ Route::get('/','IndexController@index');
 /* 用户注册, 登录, 退出 */
 //用户注册
 Route::get('auth/register','Auth\AuthController@getRegister');
-Route::post('auth/register','Auth\AuthController@postRegister');
+Route::post('auth/register',[
+    'middleware' => 'App\Http\Middleware\EmailMiddleware',
+    'uses' => 'Auth\AuthController@postRegister'
+    ]
+);
 
 
 // 用户登录
@@ -91,4 +95,11 @@ Route::get('myzd','ProjectController@myzd');
 
 
 /* 投资者查看投资和收益 */
+//投资者查看投资
 Route::get('mytz','ProjectController@mytz');
+
+//投资者查看收益
+Route::get('mysy','ProjectController@mysy');
+
+
+
