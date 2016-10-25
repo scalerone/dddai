@@ -38,8 +38,15 @@
             <span class="fs_12 ml_10">市场有风险，投资需谨慎</span>
         </div>
         <div class="fr login clearfix">
-            
-            <div class="login_bt"><a class="fff" title="登录" rel="nofollow" href="#">登录</a><a class="fff" title="注册" rel="nofollow" href="#">注册</a></div>
+            <div class="login_bt">
+                @if(!Auth::user())
+                <a class="fff" title="登录" rel="nofollow" href="{{url('auth/login')}}">登录</a>
+                <a class="fff" title="注册" rel="nofollow" href="{{url('auth/register')}}">注册</a>
+                @else
+                <a href="#">{{Auth::user()->name}}</a>
+                <a href="{{url('/auth/logout')}}">退出</a>
+                @endif
+            </div>
             
             <dl>
                 <dt><a class="txnone" rel="nofollow" title="账户中心" href="#">账户中心</a></dt>
@@ -63,13 +70,13 @@
         <div class="fr righ"> 
             <ul class="nav clearfix">
                 <li>
-                    <a class="one" title="首页" href="#" rel="nofollow">首页</a>
+                    <a class="one" title="首页" href="{{url('/')}}" rel="nofollow">首页</a>
                 </li>
                 <li class="one">
                     <a class="one" title="我要投资" href="#">我要投资</a>
                 </li>
                 <li class="rela">
-                    <a class="one" title="我要借款" href="#">我要借款</a>
+                    <a class="one" title="我要借款" href="{{url('jie')}}">我要借款</a>
                 </li>
                 <li class="rela">
                     <a class="one" title="新手导航" href="#">新手导航 </a>

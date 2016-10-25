@@ -17,9 +17,9 @@
 
 		<div class="clearfix simpleHead01">
 			<div class="fl">
-		    	<a href="#"><img height="52" style="vertical-align: initial;" alt="点点贷" src="/image/logo_all.png"></a><span>注册</span>
+		    	<a href="#"><img height="52" style="vertical-align: initial;" alt="点点贷" src="/image/logo_all.png"></a>
 		    </div>
-		    <div class="fr"><span class="fc_6">已有帐号？<a class="blue" href="#">立即登录</a></span></div>
+		    <div class="fr"><span class="fc_6">已有帐号？<a class="blue" href="{{url('auth/login')}}">立即登录</a></span></div>
 		</div>
 		<div id="reglogin" class="nwd-banner">
 			<div class="nwd_loginPos">
@@ -31,7 +31,7 @@
 					<div class="content_box banner-Word">
 						<h2>注册送10000元体验金+100元红包</h2>
 					</div>
-					<form action="{{url('auth/register')}}" method="post">
+					<form action="{{url('auth/register')}}" method="post" id='regist_submit'>
 					{!! csrf_field() !!}
                     <div class="content_box pb_20">
 						<label class="input_text yzm3">
@@ -295,4 +295,18 @@
 <!--main  end-->
 <!--main  end-->
 
-</body></html>
+<script>
+	// var fm = document.getElementById('regist_submit');
+	var mobile = document.getElementById('u');
+	mobile.onblur = function(){
+		var patt = /^1\d{10}$/;
+		if(!patt.test(document.getElementBId('u').value)){
+			
+			alert ('手机号码必须是11位数字');
+			return false;
+		}
+	}
+</script>
+</body>
+
+</html>

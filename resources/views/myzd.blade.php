@@ -18,6 +18,11 @@
 <link type="text/css" rel="stylesheet" href="/css/sea.css">
 <link type="text/css" rel="stylesheet" href="/css/style.css">
 
+<style>
+    .pagination li{
+        float:left;
+    }
+</style>
 </head>
 
 <body style="display: block;">
@@ -164,6 +169,7 @@
                                 <div class="r">
                             	<div class="fy">
                                 	<!--分页 str -->
+                                    {!!$hks->render()!!}
                             	</div>
                         		</div>
                                 

@@ -186,7 +186,7 @@ class ProjectController extends Controller
     //生成借款者的账单
     public function myzd(){
         $uid = Auth::user()->uid;
-        $hks = DB::table('hks')->where('uid',$uid)->get();
+        $hks = DB::table('hks')->where('uid',$uid)->paginate(7);
         return view('myzd', ['hks'=>$hks]);
     }
 

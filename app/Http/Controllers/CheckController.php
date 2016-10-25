@@ -13,7 +13,7 @@ class CheckController extends Controller
 {
     //项目列表
     public function getProlist(){
-        $prolist = Project::orderBy('pid','desc')->get();
+        $prolist = Project::orderBy('pid','desc')->paginate(7);
         return view('prolist',['data'=>$prolist]);
     }
 
