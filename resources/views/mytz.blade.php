@@ -128,28 +128,41 @@
                         <div class="clearfix nr">
                             <!--table-->
                             <table class="table">
-                                <tbody><tr>
+                                <tbody>
+                                <tr>
                                    <th class="f">ID</th>
                                    <th class="f">项目名称</th>
                                    <th class="f">投资金额</th>
                                    <th class="f">投资时间</th>
                                    <th class="f">投资状态</th>
                                 </tr>
-                                                                <tr>
-                                   <td class="f">25</td>
-                                   <td class="f">请接班人吃饭</td>
-                                   <td class="f">700元</td>
-                                   <td class="f">2016/05/10</td>
+
+                                @forelse($bids as $v)
+                                <tr>
+                                   <td class="f">{{$v->pid}}</td>
+                                   <td class="f">{{$v->title}}</td>
+                                   <td class="f">{{$v->money / 1000}}元</td>
+                                   <td class="f">{{date('Y/m/d',$v->pubtime)}}</td>
                                    
+
                                     <td class="f">
-                                                                                涨利中
-                                                                            </td> 
+                                        @if ( $v->status == 1 )
+                                        招标中
+                                        @elseif ( $v->status == 2 )
+                                        涨利中
+                                        @elseif ( $v->status == 3 )
+                                        已结束
+                                        @endif
+                                    </td>
                                 </tr>
-                            <tr>
-                                <td colspan="5"> 
-                                <div class="wujilu" id="errorMsg">暂无记录</div>
-                                </td>
-                            </tr>
+                                @empty
+                                <tr>
+                                    <td colspan="5"> 
+                                    <div class="wujilu" id="errorMsg">暂无记录</div>
+                                    </td>
+                                </tr>
+                                @endforelse
+
                                 </tbody>
                              </table>
                             <!--table end-->

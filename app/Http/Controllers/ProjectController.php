@@ -189,4 +189,14 @@ class ProjectController extends Controller
         $hks = DB::table('hks')->where('uid',$uid)->get();
         return view('myzd', ['hks'=>$hks]);
     }
+
+
+
+    //生成供投资者查看的投资列表
+    public function mytz(){
+        // return view('mytz');
+        $user = Auth::user();
+        $bids = DB::table('bids')->where('bids.uid',$user->uid)->whereIn('status',[1,2])->join('projects','bids.pid','=','projects.pid')->get(['bids.*','projects.status']);
+        return view('mytz',['bids'=>$bids]);
+    }
 }

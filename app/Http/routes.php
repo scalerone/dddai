@@ -87,3 +87,8 @@ Route::get('payrun','GrowController@getPayrun');
 
 //借款者账单展示
 Route::get('myzd','ProjectController@myzd');
+
+
+
+/* 投资者查看投资和收益 */
+Route::get('mytz','ProjectController@mytz');
